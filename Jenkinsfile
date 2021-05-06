@@ -11,13 +11,13 @@ pipleline {
 		}
 		stage('Test'){
 			steps{
-			echo 'Testing...'
-			sh 'npm run test'
+				echo 'Testing...'
+				sh 'npm run test'
 			}		
 		}
 		stage('Deploy'){
 			steps{
-			echo 'Deploying...'
+				echo 'Deploying...'
 			}		
 		}
 		
