@@ -9,13 +9,13 @@ pipeline {
             post {
                 failure {
                     emailext body: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                        to: 'wnowak0520@gmail.com',
+                        to: 'nwiktoria0520@gmail.com',
                         subject: "Build failed in Jenkins Job ${env.JOB_NAME}"
                     sh 'false'
                 }
                 success {
                     emailext body: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                        to: 'wnowak0520@gmail.com',
+                        to: 'nwiktoria0520@gmail.com',
                         subject: "Successful build in Jenkins Job ${env.JOB_NAME}"
                 }
             }
@@ -28,13 +28,13 @@ pipeline {
             post {
                 failure {
                     emailext body: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                        to: 'wnowak0520@gmail.com',
+                        to: 'nwiktoria0520@gmail.com',
                         subject: "Tests failed in Jenkins Job ${env.JOB_NAME}"
                     sh 'false'
                 }
                 success {
                     emailext body: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                        to: 'wnowak0520@gmail.com',
+                        to: 'nwiktoria0520@gmail.com',
                         subject: "Successful tests in Jenkins Job ${env.JOB_NAME}"
                 }
             }
@@ -47,13 +47,13 @@ pipeline {
             post {
                 failure {
                     emailext body: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                        to: 'wnowak0520@gmail.com',
+                        to: 'nwiktoria0520@gmail.com',
                         subject: "Deploy failed in Jenkins Job ${env.JOB_NAME}"
                     sh 'false'
                 }
                 success {
                     emailext body: "Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                        to: 'wnowak0520@gmail.com',
+                        to: 'nwiktoria0520@gmail.com',
                         subject: "Successful deploy in Jenkins Job ${env.JOB_NAME}"
                 }
             }
@@ -63,13 +63,13 @@ pipeline {
         failure {
             emailext attachLog: true,
                 body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                to: 'wnowak0520@gmail.com',
+                to: 'nwiktoria0520@gmail.com',
                 subject: "Build failed in Jenkins ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
         }
         success {
             emailext attachLog: true,
                 body: "${currentBuild.currentResult}: Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}",
-                to: 'wnowak0520@gmail.com',
+                to: 'nwiktoria0520@gmail.com',
                 subject: "Successful build in Jenkins ${currentBuild.currentResult}: Job ${env.JOB_NAME}"
         }
     }
